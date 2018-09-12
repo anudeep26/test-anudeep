@@ -1,0 +1,23 @@
+Host eve-ng1
+ User root
+ HostName eve-ng1
+
+Host vqfx1-core1
+ User root
+ ProxyCommand ssh -q eve-ng1 nc -q0 vqfx-core1 22
+
+Host vqfx1-core2
+ User root
+ ProxyCommand ssh -q eve-ng1 nc -q0 vqfx-core2 22
+
+Host vqfx1-leaf1
+ User root
+ ProxyCommand ssh -q eve-ng1 nc -q0 vqfx-leaf1 22
+
+Host vqfx1-leaf2
+ User root
+ ProxyCommand ssh -q eve-ng1 nc -q0 vqfx-leaf2 22
+
+Host vqfx1-leaf3
+ User root
+ ProxyCommand ssh -q eve-ng1 nc -q0 vqfx-leaf3 22
